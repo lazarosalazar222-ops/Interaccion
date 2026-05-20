@@ -7,58 +7,71 @@
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 </head>
-<body style="margin: 0px; overflow: hidden; font-family: 'Courier New', Courier, monospace;">
+<body style="margin: 0px; overflow: hidden; font-family: monospace;">
 
     <a-scene embedded arjs="sourceType: webcam; debugBorderColor: transparent;">
         
+        <a-entity light="type: ambient; color: #FFFFFF; intensity: 1.5"></a-entity>
+        <a-entity light="type: directional; color: #FFFFFF; intensity: 1" position="-1 4 2"></a-entity>
+
         <a-marker preset="hiro">
 
             <a-entity position="0 1 0" animation="property: position; to: 0 1.08 0; dir: alternate; dur: 2000; easing: easeInOutQuad; loop: true">
-                <a-sphere radius="0.45" color="#A7FFEB" opacity="0.25" material="roughness: 0.1; metalness: 0.1"></a-sphere>
-                <a-torus radius="0.48" radius-tubular="0.008" color="#00E676" rotation="45 45 0" material="emissive: #00E676; emissiveIntensity: 1"
+                <a-sphere radius="0.45" color="#A7FFEB" opacity="0.3" material="roughness: 0.1; metalness: 0.1"></a-sphere>
+                <a-torus radius="0.48" radius-tubular="0.01" color="#00E676" rotation="45 45 0"
                          animation="property: rotation; to: 45 45 360; loop: true; dur: 5000; easing: linear"></a-torus>
-                <a-torus radius="0.52" radius-tubular="0.005" color="#00B0FF" rotation="90 0 45" material="emissive: #00B0FF; emissiveIntensity: 1"
+                <a-torus radius="0.52" radius-tubular="0.008" color="#00B0FF" rotation="90 0 45"
                          animation="property: rotation; to: 90 360 45; loop: true; dur: 8000; easing: linear"></a-torus>
                 
-                <a-cylinder position="0 -0.15 0" radius="0.02" height="0.25" color="#8D6E63"></a-cylinder>
-                <a-sphere position="0 0.05 0" radius="0.12" color="#4CAF50" opacity="0.9"></a-sphere>
-                <a-sphere position="-0.08 0.1 0.05" radius="0.07" color="#2E7D32" opacity="0.8"></a-sphere>
-                <a-sphere position="0.08 0.08 -0.05" radius="0.08" color="#81C784" opacity="0.8"></a-sphere>
-                <a-cylinder position="0 -0.28 0" radius="0.18" height="0.04" color="#4E342E"></a-cylinder>
+                <a-cylinder position="0 -0.15 0" radius="0.03" height="0.25" color="#5D4037"></a-cylinder>
+                <a-sphere position="0 0.05 0" radius="0.14" color="#4CAF50"></a-sphere>
+                <a-sphere position="-0.08 0.1 0.05" radius="0.08" color="#2E7D32"></a-sphere>
+                <a-sphere position="0.08 0.08 -0.05" radius="0.09" color="#81C784"></a-sphere>
+                <a-cylinder position="0 -0.28 0" radius="0.2" height="0.04" color="#3E2723"></a-cylinder>
 
-                <a-torus radius="0.12" radius-tubular="0.006" color="#00E676" position="0.25 -0.1 0.2" rotation="70 0 0">
-                    <a-text value="UPVT" align="center" width="1" position="0 0 0.01" color="#FFFFFF" bold="true"></a-text>
+                <a-torus radius="0.14" radius-tubular="0.008" color="#00E676" position="0.25 -0.1 0.2" rotation="70 0 0">
+                    <a-text value="UPVT" align="center" width="1.2" position="0 0 0.02" color="#FFFFFF" bold="true"></a-text>
                 </a-torus>
 
-                <a-text value="DIA MUNDIAL DEL\nMEDIO AMBIENTE\n(05 JUN)" align="center" width="2.2" position="-0.8 0.6 0" color="#00E676" bold="true"></a-text>
-                <a-cylinder position="-0.4 0.4 0" rotation="0 0 45" radius="0.003" height="0.3" color="#00E676"></a-cylinder>
+                <a-text value="DIA MUNDIAL DEL\nMEDIO AMBIENTE\n(05 JUN)" align="center" width="2.5" position="-0.9 0.6 0" color="#00E676" bold="true"></a-text>
+                <a-cylinder position="-0.4 0.4 0" rotation="0 0 45" radius="0.005" height="0.3" color="#00E676"></a-cylinder>
             </a-entity>
 
 
-            <a-entity position="-1.1 0.7 0.5" rotation="0 25 0">
-                <a-cone radius-bottom="0.28" height="0.6" color="#FF8A80" opacity="0.4" material="roughness: 0; metalness: 0.2" segments-radial="3"
+            <a-entity position="-1.2 0.7 0.5" rotation="0 25 0">
+                <a-cone radius-bottom="0.28" height="0.6" color="#FF5252" opacity="0.6" material="roughness: 0.2; metalness: 0.3" segments-radial="3"
                         animation="property: rotation; to: 0 360 0; loop: true; dur: 9000; easing: linear"></a-cone>
-                <a-box width="0.15" height="0.1" depth="0.01" color="#E91E63" position="0.1 0.2 0.1">
-                    <a-box width="0.15" height="0.02" depth="0.011" color="#FFEB3B" position="0 0.03 0"></a-box>
-                    <a-box width="0.15" height="0.02" depth="0.011" color="#2196F3" position="0 -0.03 0"></a-box>
+                
+                <a-box width="0.2" height="0.12" depth="0.02" color="#E91E63" position="0.1 0.2 0.1">
+                    <a-box width="0.2" height="0.03" depth="0.022" color="#FFEB3B" position="0 0.04 0"></a-box>
+                    <a-box width="0.2" height="0.03" depth="0.022" color="#2196F3" position="0 -0.04 0"></a-box>
                 </a-box>
-                <a-sphere radius="0.015" color="#FFEB3B" position="-0.2 0.4 0.1" animation="property: position; to: -0.2 0.1 0.1; dir: alternate; loop: true; dur: 1200"></a-sphere>
-                <a-sphere radius="0.015" color="#00E5FF" position="0.2 0.3 -0.1" animation="property: position; to: 0.2 0.5 -0.1; dir: alternate; loop: true; dur: 1500"></a-sphere>
-                <a-sphere radius="0.015" color="#E91E63" position="-0.1 0.1 -0.2" animation="property: position; to: -0.1 0.4 -0.2; dir: alternate; loop: true; dur: 1000"></a-sphere>
+                
+                <a-sphere radius="0.02" color="#FFEB3B" position="-0.2 0.4 0.1" animation="property: position; to: -0.2 0.1 0.1; dir: alternate; loop: true; dur: 1200"></a-sphere>
+                <a-sphere radius="0.02" color="#00E5FF" position="0.2 0.3 -0.1" animation="property: position; to: 0.2 0.5 -0.1; dir: alternate; loop: true; dur: 1500"></a-sphere>
+                <a-sphere radius="0.02" color="#E91E63" position="-0.1 0.1 -0.2" animation="property: position; to: -0.1 0.4 -0.2; dir: alternate; loop: true; dur: 1000"></a-sphere>
 
-                <a-text value="DIA INTERNACIONAL\nDEL ORGULLO LGTB+\n(28 JUN)" align="left" width="2" position="0.2 -0.2 0" color="#E91E63" bold="true"></a-text>
+                <a-text value="DIA INTERNACIONAL\nDEL ORGULLO LGTB+\n(28 JUN)" align="left" width="2.2" position="0.3 -0.2 0" color="#E91E63" bold="true"></a-text>
             </a-entity>
 
 
-            <a-entity position="1.1 0.6 0.6" rotation="0 -30 0">
-                <a-cylinder radius="0.15" height="0.06" color="#37474F" material="wireframe: false"></a-cylinder>
+            <a-entity position="1.2 0.6 0.5" rotation="0 -30 0">
+                <a-cylinder radius="0.15" height="0.06" color="#37474F"></a-cylinder>
                 <a-cylinder radius="0.16" height="0.06" color="#00E5FF" material="wireframe: true" animation="property: rotation; to: 0 360 0; loop: true; dur: 4000; easing: linear"></a-cylinder>
                 
-                <a-box width="0.06" height="0.3" depth="0.06" color="#78909C" position="0 0.15 0" rotation="0 0 -25" id="brazo-seg1">
+                <a-box width="0.06" height="0.3" depth="0.06" color="#78909C" position="0 0.15 0" rotation="0 0 -25">
                     <a-sphere radius="0.04" color="#00E5FF" position="0 0.15 0"></a-sphere>
-                    <a-box width="0.04" height="0.25" depth="0.04" color="#B0BEC5" position="0.06 0.24 0" rotation="0 0 55">
+                    <a-box width="0.04" height="0.25" depth="0.04" color="#CFD8DC" position="0.06 0.24 0" rotation="0 0 55">
                         <a-box width="0.02" height="0.06" depth="0.04" color="#37474F" position="0 0.14 0"></a-box>
                     </a-box>
                 </a-box>
 
-                <a-cylinder radius="0.25" height="0.01" segments-radial="6" color="#00E5FF" opacity="0.15" position="
+                <a-cylinder radius="0.25" height="0.01" segments-radial="6" color="#00E5FF" opacity="0.3" position="0 0.4 -0.2" rotation="90 0 0" material="wireframe: true"></a-cylinder>
+
+                <a-text value="DIA DE LA\nINGENIERIA MEXICANA\n(01 JUL)" align="center" width="2.2" position="-0.3 -0.2 0" color="#00E5FF" bold="true"></a-text>
+            </a-entity>
+
+
+            <a-entity position="1.2 0.8 -0.8">
+                <a-plane width="0.6" height="0.35" color="#1E88E5" opacity="0.4" material="roughness: 0"></a-plane>
+                <a-
